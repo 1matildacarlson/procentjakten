@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: procentjakten
+    runtime: python
+    plan: free
+    buildCommand: "echo klart"
+    startCommand: "python server.py"
+    envVars:
+      - key: PJ_PIN
+        value: "2525"

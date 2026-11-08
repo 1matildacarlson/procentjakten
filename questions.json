@@ -1,0 +1,43 @@
+[
+  {"pct": "90", "q": "Vilket tal saknas?", "seq": "2 · 4 · 6 · ? · 10", "kb": "num",
+   "accept": ["8", "åtta"], "a": "8", "x": "Talen ökar med 2 varje gång."},
+
+  {"pct": "80", "q": "Vilken dag kommer två dagar efter dagen före onsdag?",
+   "accept": ["torsdag", "tors"], "a": "Torsdag", "x": "Dagen före onsdag är tisdag. Två dagar efter tisdag är torsdag."},
+
+  {"pct": "70", "q": "Det ligger 3 äpplen på bordet. Du tar 2. Hur många äpplen har du?", "kb": "num",
+   "accept": ["2", "två"], "a": "2", "x": "Du har de två du tog – frågan gällde inte hur många som ligger kvar."},
+
+  {"pct": "60", "q": "Vilken bokstav kommer härnäst?", "seq": "J F M A M J J A S O N ?",
+   "accept": ["d", "december"], "a": "D", "x": "Det är månadernas första bokstav: januari … november, december."},
+
+  {"pct": "50", "q": "Hur många gånger förekommer bokstaven A här?", "seq": "BANAN PÅ STRANDEN", "kb": "num",
+   "accept": ["3", "tre"], "a": "3", "x": "BANAN har två, STRANDEN har en. Å är en egen bokstav och räknas inte."},
+
+  {"pct": "40", "q": "En tegelsten väger 1 kg plus en halv tegelsten. Hur mycket väger en hel tegelsten (i kg)?", "kb": "num",
+   "accept": ["2", "två"], "a": "2 kg", "x": "Om halva stenen väger 1 kg väger hela stenen 2 kg."},
+
+  {"pct": "30", "q": "Vilket tal kommer härnäst?", "seq": "16 · 8 · 24 · 12 · 36 · 18 · ?", "kb": "num",
+   "accept": ["54"], "a": "54", "x": "Varannan gång delat med 2, varannan gång gånger 3: 18 × 3 = 54."},
+
+  {"pct": "25", "q": "🎂 Födelsedagsfrågan: Hur många födelsedagar har en vanlig person?", "kb": "num",
+   "accept": ["1", "en", "ett"], "a": "1", "x": "Man föds bara en dag – resten är årsdagar av den. Grattis på 25-årsdagen!"},
+
+  {"pct": "20", "q": "Vilket ord passar inte in?", "seq": "KAJAK · RADAR · ROTOR · KANOT · TILLIT",
+   "accept": ["kanot"], "a": "KANOT", "x": "Alla andra är palindrom – de blir samma ord baklänges."},
+
+  {"pct": "15", "q": "Klockan är 3:15. Hur många grader är det mellan tim- och minutvisaren?", "kb": "num",
+   "accept": ["7.5"], "a": "7,5°", "x": "Minutvisaren pekar på 3. Timvisaren har gått en kvarts väg mot 4: en fjärdedel av 30° = 7,5°."},
+
+  {"pct": "10", "q": "5 maskiner gör 5 prylar på 5 minuter. Hur många minuter tar det för 100 maskiner att göra 100 prylar?", "kb": "num",
+   "accept": ["5", "fem"], "a": "5 minuter", "x": "Varje maskin gör en pryl på 5 minuter, oavsett hur många maskiner som jobbar samtidigt."},
+
+  {"pct": "5", "q": "Vilken bokstav kommer härnäst?", "seq": "E · T · T · F · F · S · S · Å · ?",
+   "accept": ["n", "nio"], "a": "N", "x": "Första bokstaven i ett, två, tre, fyra, fem, sex, sju, åtta … nio."},
+
+  {"pct": "3", "q": "Vilket tal kommer härnäst?", "seq": "1 · 11 · 21 · 1211 · 111221 · ?", "kb": "num",
+   "accept": ["312211"], "a": "312211", "x": "Varje tal beskriver det förra: 111221 = ”tre ettor, två tvåor, en etta” → 3-1-2-2-1-1."},
+
+  {"pct": "1", "q": "Vilket tal kommer härnäst?", "seq": "1 · 5 · 4 · 9 · 6 · 7 · 10 · 3 · ?", "kb": "num",
+   "accept": ["2", "två"], "a": "2", "x": "Talen står i bokstavsordning: ett, fem, fyra, nio, sex, sju, tio, tre, två – och sist åtta."}
+]

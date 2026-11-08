@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Procentjakten – Topplista</title>
+<style>
+  :root{--bg:#0b1020;--bg2:#141b33;--ink:#f4f1e8;--muted:#9aa3c0;--gold:#f2c14e;--hot:#ff5a5f;--ok:#3ddc97;--line:#26305a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);
+    background:radial-gradient(1400px 800px at 30% -10%,#23306a 0%,var(--bg) 60%) fixed;min-height:100vh;
+    display:grid;grid-template-columns:minmax(300px,32vw) 1fr;gap:3vw;padding:3vw}
+  .left{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+  .logo{font-weight:900;font-size:clamp(28px,3.4vw,56px);letter-spacing:.03em;line-height:1}
+  .logo span{color:var(--gold)}
+  .party{color:var(--muted);font-size:clamp(14px,1.4vw,22px);margin:10px 0 2.4vw}
+  .qrbox{background:#fff;border-radius:22px;padding:16px;width:100%;max-width:26vw;aspect-ratio:1}
+  .qrbox svg{width:100%;height:100%;display:block}
+  .steps{display:grid;grid-template-columns:1fr 1fr;gap:1.4vw;width:100%}
+  .qrbox.small{max-width:none;padding:10px;border-radius:16px}
+  .steps .scan{font-size:clamp(15px,1.4vw,24px)}
+  .steps .url{font-size:clamp(11px,1vw,16px)}
+  .scan{font-size:clamp(18px,1.8vw,30px);font-weight:800;margin-top:1.6vw}
+  .url{color:var(--gold);font-size:clamp(14px,1.4vw,22px);margin-top:6px;word-break:break-all}
+  .wifi{color:var(--muted);font-size:clamp(12px,1.1vw,17px);margin-top:10px}
+  .right{display:flex;flex-direction:column;min-width:0}
+  .head{display:flex;justify-content:space-between;align-items:end;margin-bottom:1.2vw}
+  h2{font-size:clamp(26px,3vw,52px);font-weight:900}
+  .stats{color:var(--muted);font-size:clamp(14px,1.3vw,22px);text-align:right}
+  .stats b{color:var(--ink)}
+  ol{list-style:none;display:flex;flex-direction:column;gap:.6vw}
+  li{display:grid;grid-template-columns:3.2em 1fr auto auto;align-items:center;gap:1.2vw;
+     background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:.8vw 1.2vw;
+     font-size:clamp(16px,1.6vw,28px);transition:transform .3s}
+  li.top1{border-color:var(--gold);box-shadow:0 0 30px rgba(242,193,78,.18)}
+  .rk{font-weight:900;color:var(--muted)}
+  li.top1 .rk{color:var(--gold)}
+  .nm{font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .lv{font-weight:900;color:var(--gold);white-space:nowrap}
+  .st{font-size:.7em;font-weight:700;padding:.25em .7em;border-radius:99px;white-space:nowrap}
+  .st.spelar{background:#3a3212;color:var(--gold)}
+  .st.ute{background:#3a1820;color:var(--hot)}
+  .st.klar{background:#173a2d;color:var(--ok)}
+  .empty{color:var(--muted);font-size:clamp(18px,1.8vw,28px);margin-top:3vw}
+  .admin{position:fixed;right:12px;bottom:10px;display:flex;gap:6px;opacity:.25}
+  .admin:hover,.admin:focus-within{opacity:1}
+  .admin input{width:90px;padding:6px 8px;border-radius:8px;border:1px solid var(--line);background:var(--bg2);color:var(--ink)}
+  .admin button{padding:6px 10px;border-radius:8px;border:1px solid var(--line);background:#1d2546;color:var(--ink);cursor:pointer}
+  .msg{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);color:var(--hot);font-weight:700}
+  @media (max-width:800px){body{grid-template-columns:1fr}.qrbox{max-width:60vw}}
+</style>
+</head>
+<body>
+  <section class="left">
+    <div class="logo">PROCENT<span>JAKTEN</span></div>
+    <div class="party">🎉 25-årsfesten 🎉</div>
+    <div id="wifiStep" style="display:none;width:100%">
+      <div class="steps">
+        <div><div class="qrbox small" id="qrWifi"></div><div class="scan">1. Anslut till wifi</div><div class="url" id="wifiName"></div></div>
+        <div><div class="qrbox small" id="qrGame"></div><div class="scan">2. Spela!</div><div class="url" id="url2"></div></div>
+      </div>
+    </div>
+    <div id="oneStep" style="width:100%;display:flex;flex-direction:column;align-items:center">
+      <div class="qrbox" id="qr"></div>
+      <div class="scan">Skanna och spela!</div>
+      <div class="url" id="url"></div>
+      <div class="wifi" id="wifiNote">Du måste vara ansluten till festens wifi</div>
+    </div>
+  </section>
+  <section class="right">
+    <div class="head">
+      <h2>Topplista</h2>
+      <div class="stats" id="stats"></div>
+    </div>
+    <ol id="list"></ol>
+    <div class="empty" id="empty">Ingen har börjat än – skanna koden! 📱</div>
+  </section>
+
+  <form class="admin" id="admin">
+    <input id="pin" placeholder="PIN" inputmode="numeric" autocomplete="off">
+    <button>Nollställ</button>
+  </form>
+  <div class="msg" id="msg"></div>
+
+<script src="/qr.js"></script>
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function drawQR(text, el = "qr"){
+  const L = window.QRCodeLib;
+  const q = new L.QRCode(-1, L.ECL.M); q.addData(text); q.make();
+  const n = q.getModuleCount(); let d = "";
+  for(let r = 0; r < n; r++) for(let c = 0; c < n; c++) if(q.isDark(r, c)) d += `M${c} ${r}h1v1h-1z`;
+  $(el).innerHTML = `<svg viewBox="-2 -2 ${n+4} ${n+4}" shape-rendering="crispEdges"><path d="${d}" fill="#0b1020"/></svg>`;
+}
+
+let lastJson = "";
+async function refresh(){
+  try{
+    const r = await fetch("/api/leaderboard"); const j = await r.json();
+    const s = JSON.stringify(j.rows); if(s === lastJson) return; lastJson = s;
+    const rows = j.rows;
+    $("empty").style.display = rows.length ? "none" : "";
+    const playing = rows.filter(x => x.status === "spelar").length;
+    const club = rows.filter(x => x.status === "klar").length;
+    $("stats").innerHTML = `<b>${rows.length}</b> spelare · <b>${playing}</b> spelar nu` + (club ? ` · <b>${club}</b> i 1 %-klubben 🏆` : "");
+    $("list").innerHTML = rows.slice(0, 12).map((x, i) => {
+      const lv = x.status === "klar" ? "1 % 🏆" : (x.cleared ? x.cleared + " %" : "–");
+      const st = x.status === "spelar" ? `spelar · ${x.now} %` : x.status === "ute" ? "ute" : "klar!";
+      return `<li class="${i === 0 && x.correct > 0 ? 'top1' : ''}"><span class="rk">${i+1}.</span>
+        <span class="nm">${esc(x.name)}</span><span class="lv">${lv}</span><span class="st ${x.status}">${st}</span></li>`;
+    }).join("");
+  }catch(e){}
+}
+
+$("admin").onsubmit = async e => {
+  e.preventDefault();
+  const r = await fetch("/api/reset", {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({pin:$("pin").value})});
+  $("msg").textContent = r.ok ? "Topplistan är nollställd" : "Fel PIN – den står i serverns fönster";
+  $("pin").value = ""; lastJson = ""; refresh();
+  setTimeout(() => $("msg").textContent = "", 3000);
+};
+
+(async () => {
+  const info = await (await fetch("/api/info")).json();
+  $("url").textContent = $("url2").textContent = info.url;
+  if(info.wifi_ssid){
+    const e = s => s.replace(/([\\;,:"])/g, "\\$1");
+    drawQR(`WIFI:T:${info.wifi_pass ? "WPA" : "nopass"};S:${e(info.wifi_ssid)};P:${e(info.wifi_pass)};;`, "qrWifi");
+    drawQR(info.url, "qrGame");
+    $("wifiName").textContent = info.wifi_ssid + (info.wifi_pass ? " · lösen: " + info.wifi_pass : "");
+    $("wifiStep").style.display = ""; $("oneStep").style.display = "none";
+  }else{
+    drawQR(info.url);
+    if(info.url.startsWith("https://")) $("wifiNote").textContent = "Funkar med mobildata – inget wifi behövs";
+  }
+  refresh(); setInterval(refresh, 2000);
+})();
+</script>
+</body>
+</html>
