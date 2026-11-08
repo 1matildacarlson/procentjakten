@@ -1,43 +1,43 @@
 [
-  {"pct": "90", "q": "Vilket tal saknas?", "seq": "2 · 4 · 6 · ? · 10", "kb": "num",
-   "accept": ["8", "åtta"], "a": "8", "x": "Talen ökar med 2 varje gång."},
+  {"pct": "90", "q": "Hur många hörn har en kvadrat och en triangel tillsammans?", "kb": "num",
+   "accept": ["7", "sju"], "a": "7", "x": "En kvadrat har 4 hörn och en triangel 3. 4 + 3 = 7."},
 
-  {"pct": "80", "q": "Vilken dag kommer två dagar efter dagen före onsdag?",
-   "accept": ["torsdag", "tors"], "a": "Torsdag", "x": "Dagen före onsdag är tisdag. Två dagar efter tisdag är torsdag."},
+  {"pct": "80", "q": "Lisa är äldre än Kim. Kim är äldre än Sam. Vem är yngst?",
+   "accept": ["sam"], "a": "Sam", "x": "Lisa är äldst, sedan Kim, och Sam är yngst."},
 
-  {"pct": "70", "q": "Det ligger 3 äpplen på bordet. Du tar 2. Hur många äpplen har du?", "kb": "num",
-   "accept": ["2", "två"], "a": "2", "x": "Du har de två du tog – frågan gällde inte hur många som ligger kvar."},
+  {"pct": "70", "q": "Vad blir det här?", "seq": "10 + 10 × 0", "kb": "num",
+   "accept": ["10", "tio"], "a": "10", "x": "Multiplikation går före addition: 10 × 0 = 0, och 10 + 0 = 10."},
 
-  {"pct": "60", "q": "Vilken bokstav kommer härnäst?", "seq": "J F M A M J J A S O N ?",
-   "accept": ["d", "december"], "a": "D", "x": "Det är månadernas första bokstav: januari … november, december."},
+  {"pct": "60", "q": "Vilket tal kommer härnäst?", "seq": "1 · 4 · 9 · 16 · 25 · ?", "kb": "num",
+   "accept": ["36"], "a": "36", "x": "Det är kvadrattal: 1², 2², 3², 4², 5² … och 6² = 36."},
 
-  {"pct": "50", "q": "Hur många gånger förekommer bokstaven A här?", "seq": "BANAN PÅ STRANDEN", "kb": "num",
-   "accept": ["3", "tre"], "a": "3", "x": "BANAN har två, STRANDEN har en. Å är en egen bokstav och räknas inte."},
+  {"pct": "50", "q": "Hur många av årets månader har 28 dagar?", "kb": "num",
+   "accept": ["12", "tolv", "alla"], "a": "12 (alla)", "x": "Alla månader har minst 28 dagar – inte bara februari."},
 
-  {"pct": "40", "q": "En tegelsten väger 1 kg plus en halv tegelsten. Hur mycket väger en hel tegelsten (i kg)?", "kb": "num",
-   "accept": ["2", "två"], "a": "2 kg", "x": "Om halva stenen väger 1 kg väger hela stenen 2 kg."},
+  {"pct": "40", "q": "En bonde har 17 får. Alla utom 9 springer bort. Hur många får har han kvar?", "kb": "num",
+   "accept": ["9", "nio"], "a": "9", "x": "”Alla utom 9” betyder att 9 är kvar."},
 
-  {"pct": "30", "q": "Vilket tal kommer härnäst?", "seq": "16 · 8 · 24 · 12 · 36 · 18 · ?", "kb": "num",
-   "accept": ["54"], "a": "54", "x": "Varannan gång delat med 2, varannan gång gånger 3: 18 × 3 = 54."},
+  {"pct": "30", "q": "Vilken bokstav kommer härnäst?", "seq": "M · T · O · T · F · L · ?",
+   "accept": ["s", "söndag"], "a": "S", "x": "Veckodagarnas första bokstav: måndag, tisdag … lördag, söndag."},
 
-  {"pct": "25", "q": "🎂 Födelsedagsfrågan: Hur många födelsedagar har en vanlig person?", "kb": "num",
-   "accept": ["1", "en", "ett"], "a": "1", "x": "Man föds bara en dag – resten är årsdagar av den. Grattis på 25-årsdagen!"},
+  {"pct": "25", "q": "🎂 Födelsedagsfrågan: Du har fått ett ljus per år på tårtan varje födelsedag, från 1-årsdagen till och med 25-årsdagen. Hur många ljus har du blåst ut totalt?", "kb": "num",
+   "accept": ["325"], "a": "325", "x": "1 + 2 + 3 + … + 25 = 25 × 26 / 2 = 325. Grattis på 25-årsdagen!"},
 
-  {"pct": "20", "q": "Vilket ord passar inte in?", "seq": "KAJAK · RADAR · ROTOR · KANOT · TILLIT",
-   "accept": ["kanot"], "a": "KANOT", "x": "Alla andra är palindrom – de blir samma ord baklänges."},
+  {"pct": "20", "q": "Vilket tal passar inte in?", "seq": "3 · 5 · 7 · 9 · 11 · 13", "kb": "num",
+   "accept": ["9", "nio"], "a": "9", "x": "Alla andra är primtal. 9 går att dela med 3."},
 
-  {"pct": "15", "q": "Klockan är 3:15. Hur många grader är det mellan tim- och minutvisaren?", "kb": "num",
-   "accept": ["7.5"], "a": "7,5°", "x": "Minutvisaren pekar på 3. Timvisaren har gått en kvarts väg mot 4: en fjärdedel av 30° = 7,5°."},
+  {"pct": "15", "q": "Om igår var dagen efter måndag – vilken dag är det i övermorgon?",
+   "accept": ["fredag", "fre"], "a": "Fredag", "x": "Igår var tisdag, så idag är onsdag. Övermorgon blir fredag."},
 
-  {"pct": "10", "q": "5 maskiner gör 5 prylar på 5 minuter. Hur många minuter tar det för 100 maskiner att göra 100 prylar?", "kb": "num",
-   "accept": ["5", "fem"], "a": "5 minuter", "x": "Varje maskin gör en pryl på 5 minuter, oavsett hur många maskiner som jobbar samtidigt."},
+  {"pct": "10", "q": "En flaska och en kork kostar 11 kr tillsammans. Flaskan kostar 10 kr mer än korken. Vad kostar korken?",
+   "accept": ["0.5", "0.50", "0.5kr", "0.50kr", "0.5kronor", "0.50kronor", "50öre", "femtioöre"], "a": "50 öre", "x": "Om korken kostar 0,50 kr kostar flaskan 10,50 kr. Tillsammans blir det 11 kr. (1 kr fungerar inte – då kostar flaskan 11 kr och summan blir 12.)"},
 
-  {"pct": "5", "q": "Vilken bokstav kommer härnäst?", "seq": "E · T · T · F · F · S · S · Å · ?",
-   "accept": ["n", "nio"], "a": "N", "x": "Första bokstaven i ett, två, tre, fyra, fem, sex, sju, åtta … nio."},
+  {"pct": "5", "q": "Vilket tal kommer härnäst?", "seq": "1 · 2 · 6 · 24 · 120 · ?", "kb": "num",
+   "accept": ["720"], "a": "720", "x": "Man gångrar med 2, 3, 4, 5 … och sedan 6: 120 × 6 = 720."},
 
-  {"pct": "3", "q": "Vilket tal kommer härnäst?", "seq": "1 · 11 · 21 · 1211 · 111221 · ?", "kb": "num",
-   "accept": ["312211"], "a": "312211", "x": "Varje tal beskriver det förra: 111221 = ”tre ettor, två tvåor, en etta” → 3-1-2-2-1-1."},
+  {"pct": "3", "q": "Vilket tal kommer härnäst?", "seq": "61 · 52 · 63 · 94 · 46 · ?", "kb": "num",
+   "accept": ["18", "arton"], "a": "18", "x": "Det är kvadrattalen 16, 25, 36, 49, 64 skrivna baklänges. Nästa är 81 → 18."},
 
-  {"pct": "1", "q": "Vilket tal kommer härnäst?", "seq": "1 · 5 · 4 · 9 · 6 · 7 · 10 · 3 · ?", "kb": "num",
-   "accept": ["2", "två"], "a": "2", "x": "Talen står i bokstavsordning: ett, fem, fyra, nio, sex, sju, tio, tre, två – och sist åtta."}
+  {"pct": "1", "q": "Vilket tal kommer härnäst?", "seq": "7 · 8 · 4 · 5 · 3 · 4 · 4 · ?", "kb": "num",
+   "accept": ["7", "sju"], "a": "7", "x": "Antal bokstäver i månadernas namn: januari (7), februari (8), mars (4), april (5), maj (3), juni (4), juli (4), augusti (7)."}
 ]
