@@ -1,43 +1,29 @@
 [
-  {"pct": "90", "q": "Hur många hörn har en kvadrat och en triangel tillsammans?", "kb": "num",
-   "accept": ["7", "sju"], "a": "7", "x": "En kvadrat har 4 hörn och en triangel 3. 4 + 3 = 7."},
+  {"pct": "90", "q": "Hur många hörn har en kvadrat och en triangel tillsammans?", "kb": "num", "accept": ["7", "sju"], "a": "7", "x": "En kvadrat har 4 hörn och en triangel 3. 4 + 3 = 7."},
 
-  {"pct": "80", "q": "Lisa är äldre än Kim. Kim är äldre än Sam. Vem är yngst?",
-   "accept": ["sam"], "a": "Sam", "x": "Lisa är äldst, sedan Kim, och Sam är yngst."},
+  {"pct": "80", "q": "Lisa är äldre än Kim. Kim är äldre än Sam. Vem är yngst?", "accept": ["sam"], "a": "Sam", "x": "Lisa är äldst, sedan Kim, och Sam är yngst."},
 
-  {"pct": "70", "q": "Vad blir det här?", "seq": "10 + 10 × 0", "kb": "num",
-   "accept": ["10", "tio"], "a": "10", "x": "Multiplikation går före addition: 10 × 0 = 0, och 10 + 0 = 10."},
+  {"pct": "70", "q": "Hur många av årets månader har 28 dagar?", "kb": "num", "accept": ["12", "tolv", "alla"], "a": "12 (alla)", "x": "Alla månader har minst 28 dagar – inte bara februari."},
 
-  {"pct": "60", "q": "Vilket tal kommer härnäst?", "seq": "1 · 4 · 9 · 16 · 25 · ?", "kb": "num",
-   "accept": ["36"], "a": "36", "x": "Det är kvadrattal: 1², 2², 3², 4², 5² … och 6² = 36."},
+  {"pct": "60", "q": "En bonde har 17 får. Alla utom 9 springer bort. Hur många får har han kvar?", "kb": "num", "accept": ["9", "nio"], "a": "9", "x": "”Alla utom 9” betyder att 9 är kvar."},
 
-  {"pct": "50", "q": "Hur många av årets månader har 28 dagar?", "kb": "num",
-   "accept": ["12", "tolv", "alla"], "a": "12 (alla)", "x": "Alla månader har minst 28 dagar – inte bara februari."},
+  {"pct": "50", "q": "Vilken bokstav kommer härnäst?", "seq": "M · T · O · T · F · L · ?", "accept": ["s", "söndag"], "a": "S", "x": "Veckodagarnas första bokstav: måndag, tisdag … lördag, söndag."},
 
-  {"pct": "40", "q": "En bonde har 17 får. Alla utom 9 springer bort. Hur många får har han kvar?", "kb": "num",
-   "accept": ["9", "nio"], "a": "9", "x": "”Alla utom 9” betyder att 9 är kvar."},
+  {"pct": "40", "q": "Vad blir det här?", "seq": "10 + 10 × 0", "kb": "num", "accept": ["10", "tio"], "a": "10", "x": "Multiplikation går före addition: 10 × 0 = 0, och 10 + 0 = 10."},
 
-  {"pct": "30", "q": "Vilken bokstav kommer härnäst?", "seq": "M · T · O · T · F · L · ?",
-   "accept": ["s", "söndag"], "a": "S", "x": "Veckodagarnas första bokstav: måndag, tisdag … lördag, söndag."},
+  {"pct": "30", "q": "Vilket tal passar inte in?", "seq": "3 · 5 · 7 · 9 · 11 · 13", "kb": "num", "accept": ["9", "nio"], "a": "9", "x": "Alla andra är primtal. 9 går att dela med 3."},
 
-  {"pct": "25", "q": "🎂 Födelsedagsfrågan: Du har fått ett ljus per år på tårtan varje födelsedag, från 1-årsdagen till och med 25-årsdagen. Hur många ljus har du blåst ut totalt?", "kb": "num",
-   "accept": ["325"], "a": "325", "x": "1 + 2 + 3 + … + 25 = 25 × 26 / 2 = 325. Grattis på 25-årsdagen!"},
+  {"pct": "25", "q": "🎂 Födelsedagsfrågan: Hur många födelsedagar har en vanlig person?", "kb": "num", "accept": ["1", "en", "ett"], "a": "1", "x": "Man föds bara en dag – resten är årsdagar av den. Grattis på 25-årsdagen!"},
 
-  {"pct": "20", "q": "Vilket tal passar inte in?", "seq": "3 · 5 · 7 · 9 · 11 · 13", "kb": "num",
-   "accept": ["9", "nio"], "a": "9", "x": "Alla andra är primtal. 9 går att dela med 3."},
+  {"pct": "20", "q": "Vilket tal kommer härnäst?", "seq": "1 · 4 · 9 · 16 · 25 · ?", "kb": "num", "accept": ["36"], "a": "36", "x": "Det är kvadrattal: 1², 2², 3², 4², 5² … och 6² = 36."},
 
-  {"pct": "15", "q": "Om igår var dagen efter måndag – vilken dag är det i övermorgon?",
-   "accept": ["fredag", "fre"], "a": "Fredag", "x": "Igår var tisdag, så idag är onsdag. Övermorgon blir fredag."},
+  {"pct": "15", "q": "Om igår var dagen efter måndag – vilken dag är det i övermorgon?", "accept": ["fredag", "fre"], "a": "Fredag", "x": "Igår var tisdag, så idag är onsdag. Övermorgon blir fredag."},
 
-  {"pct": "10", "q": "En flaska och en kork kostar 11 kr tillsammans. Flaskan kostar 10 kr mer än korken. Vad kostar korken?",
-   "accept": ["0.5", "0.50", "0.5kr", "0.50kr", "0.5kronor", "0.50kronor", "50öre", "femtioöre"], "a": "50 öre", "x": "Om korken kostar 0,50 kr kostar flaskan 10,50 kr. Tillsammans blir det 11 kr. (1 kr fungerar inte – då kostar flaskan 11 kr och summan blir 12.)"},
+  {"pct": "10", "q": "En flaska och en kork kostar 11 kr tillsammans. Flaskan kostar 10 kr mer än korken. Vad kostar korken?", "accept": ["0.5", "0.50", "0.5kr", "0.50kr", "0.5kronor", "0.50kronor", "50öre", "femtioöre"], "a": "50 öre", "x": "Om korken kostar 0,50 kr kostar flaskan 10,50 kr. Tillsammans blir det 11 kr. (1 kr fungerar inte – då kostar flaskan 11 kr och summan blir 12.)"},
 
-  {"pct": "5", "q": "Vilket tal kommer härnäst?", "seq": "1 · 2 · 6 · 24 · 120 · ?", "kb": "num",
-   "accept": ["720"], "a": "720", "x": "Man gångrar med 2, 3, 4, 5 … och sedan 6: 120 × 6 = 720."},
+  {"pct": "5", "q": "Vilket tal kommer härnäst?", "seq": "1 · 1 · 2 · 3 · 5 · 8 · ?", "kb": "num", "accept": ["13", "tretton"], "a": "13", "x": "Varje tal är summan av de två före: 5 + 8 = 13."},
 
-  {"pct": "3", "q": "Vilket tal kommer härnäst?", "seq": "61 · 52 · 63 · 94 · 46 · ?", "kb": "num",
-   "accept": ["18", "arton"], "a": "18", "x": "Det är kvadrattalen 16, 25, 36, 49, 64 skrivna baklänges. Nästa är 81 → 18."},
+  {"pct": "3", "q": "En snigel ligger i botten av en 10 meter djup brunn. Varje dag klättrar den 3 meter upp, och varje natt glider den 2 meter ner. Vilken dag kommer den upp ur brunnen?", "kb": "num", "accept": ["8", "åtta", "dag8"], "a": "Dag 8", "x": "Efter 7 dygn är snigeln på 7 meter. Dag 8 klättrar den 3 meter till 10 meter och är uppe – innan natten hinner dra ner den."},
 
-  {"pct": "1", "q": "Vilket tal kommer härnäst?", "seq": "7 · 8 · 4 · 5 · 3 · 4 · 4 · ?", "kb": "num",
-   "accept": ["7", "sju"], "a": "7", "x": "Antal bokstäver i månadernas namn: januari (7), februari (8), mars (4), april (5), maj (3), juni (4), juli (4), augusti (7)."}
+  {"pct": "1", "q": "Vilken bokstav kommer härnäst?", "seq": "E · T · T · F · F · S · S · ?", "accept": ["å", "åtta"], "a": "Å", "x": "Första bokstaven i ett, två, tre, fyra, fem, sex, sju … åtta."}
 ]
